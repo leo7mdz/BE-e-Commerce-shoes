@@ -15,7 +15,7 @@ app.get("/", (req, res) => {
 });
 
 app.use("/products", productsRoutes);
-app.use("/stripe", stripeRoute);
+/*app.use("/stripe", stripeRoute); */
 
 app.listen(process.env.PORT, () =>
   console.log(`Servidor levantado en el puerto ${process.env.PORT}`)

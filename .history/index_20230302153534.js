@@ -1,7 +1,7 @@
 import express from "express";
 import cors from "cors";
 import productsRoutes from "./routes/products-route.js";
-import stripeRoute from "./routes/stripe-route.js";
+/* import stripeRoute from "./routes/stripe.js"; */
 import dotenv from "dotenv";
 
 const app = express();
@@ -15,7 +15,7 @@ app.get("/", (req, res) => {
 });
 
 app.use("/products", productsRoutes);
-app.use("/stripe", stripeRoute);
+/*app.use("/stripe", stripeRoute); */
 
 app.listen(process.env.PORT, () =>
   console.log(`Servidor levantado en el puerto ${process.env.PORT}`)
