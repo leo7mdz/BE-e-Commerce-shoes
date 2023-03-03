@@ -6,15 +6,7 @@ import dotenv from "dotenv";
 
 const app = express();
 
-const corsOptions = {
-  origin: "*",
-  credentials: true, //access-control-allow-credentials:true
-  optionSuccessStatus: 200,
-};
-
-app.use(cors(corsOptions)); // Use this after the variable declaration
-
-/* app.use(cors()); */
+app.use(cors());
 dotenv.config();
 app.use(express.json());
 
